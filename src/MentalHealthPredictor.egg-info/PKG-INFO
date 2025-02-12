@@ -2,10 +2,10 @@ Metadata-Version: 2.2
 Name: MentalHealthPredictor
 Version: 0.0.1
 Summary: A small python package for Mental-Health-Predictor app
-Home-page: https://github.com/Capstone_ Project/Mental-Health-Predictor
-Author: Capstone_ Project
+Home-page: https://github.com/LokeshDondapati/Mental-Health-Predictor
+Author: Capstone_Project
 Author-email: ldondapa@mail.yu.edu
-Project-URL: Bug Tracker, https://github.com/Capstone_ Project/Mental-Health-Predictor/issues
+Project-URL: Bug Tracker, https://github.com/LokeshDondapati/Mental-Health-Predictor/issues
 Dynamic: author
 Dynamic: author-email
 Dynamic: description
