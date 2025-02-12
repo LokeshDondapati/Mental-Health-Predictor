@@ -1,0 +1,33 @@
+# Data Ingestion
+boto3==1.36.18
+
+# Data Analysis and Visualization
+pandas==2.2.3
+numpy==2.0.2
+matplotlib==3.10.0
+seaborn==0.13.2
+
+# Model Training
+scipy==1.15.1
+tensorflow==2.18.0
+
+# Model Prediction
+
+# Model Tracking
+dvc==3.59.0
+mlflow==2.20.1
+
+# Model Deployment
+Flask==3.1.0
+Flask-Cors  # (No version specified, add if needed)
+
+# Others
+python-box  # (No version specified, add if needed)
+pyYAML==6.0.2
+tqdm==4.67.1
+ensure  # (No version specified, add if needed)
+joblib==1.4.2
+types-PyYAML  # (No version specified, add if needed)
+notebook  # (No version specified, add if needed)
+
+-e .
