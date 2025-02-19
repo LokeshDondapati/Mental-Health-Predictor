@@ -1,0 +1,11 @@
+[2025-02-19 16:59:10,774: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-02-19 16:59:10,776: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-19 16:59:10,778: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-19 16:59:10,779: INFO: common: created directory at: artifacts]
+[2025-02-19 16:59:10,779: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-19 16:59:10,844: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-02-19 16:59:11,309: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-19 16:59:12,405: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-19 16:59:12,408: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]

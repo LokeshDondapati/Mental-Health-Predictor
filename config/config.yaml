@@ -1,0 +1,8 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  AWS_REGION: us-east-1
+  BUCKET_NAME: mental-health-dataset-capstone
+  S3_OBJECT_KEY: mental_health_dataset.csv
+  root_dir: artifacts/data_ingestion
+  LOCAL_DOWNLOAD_FILE: artifacts/data_ingestion/mental_health_dataset.csv 

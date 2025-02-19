@@ -27,3 +27,44 @@ conda activate MentalHealthPredictor
 pip install -r requirements.txt
 ```
 
+## **********************************************************************************************
+
+# DEVELOPMENT STEPS
+
+## STAGE_01-> DATA INGESTION
+
+#### 1.Create an s3 bucket and upload the data in s3 bucket copy the key id.</br>
+
+```bash
+s3://mental-health-dataset-capstone/mental_health_dataset.csv
+```
+
+#### 2.Create an IAM user and give access to s3 on command line and download the access and secret key tokens to configure in cmd using aws configure </br>
+
+```bash
+AWS ACCESS KEY = Contact owner
+```
+
+```bash
+AWS SECRET KEY = Contact owner
+```
+```bash
+Default region name = us-east-1
+```
+
+```bash
+Default output format = "Press enter for json"
+```
+
+#### 3.Update the config.yaml file with correct config parameters of the aws 
+```bash
+artifacts_root: artifacts
+
+data_ingestion:
+  AWS_REGION: us-east-1
+  BUCKET_NAME: mental-health-dataset-capstone
+  S3_OBJECT_KEY: mental_health_dataset.csv
+  root_dir: artifacts/data_ingestion
+  LOCAL_DOWNLOAD_FILE: artifacts/data_ingestion/mental_health_dataset.csv 
+
+```
