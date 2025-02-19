@@ -3,7 +3,7 @@ Name: MentalHealthPredictor
 Version: 0.0.1
 Summary: A small python package for Mental-Health-Predictor app
 Home-page: https://github.com/LokeshDondapati/Mental-Health-Predictor
-Author: Capstone_Project
+Author: LokeshDondapati
 Author-email: ldondapa@mail.yu.edu
 Project-URL: Bug Tracker, https://github.com/LokeshDondapati/Mental-Health-Predictor/issues
 Dynamic: author
@@ -14,4 +14,72 @@ Dynamic: project-url
 Dynamic: summary
 
 # Mental-Health-Predictor
-Building the mental health predictor for predicting the mental health of people with yes or no
+Building the mental health predictor for predicting the mental health of people with yes or no as final prediction.
+User can select among multiple machine learning models for the prediction.
+
+
+# How to run?
+### STEPS:
+
+Clone the repository
+
+```bash
+https://github.com/LokeshDondapati/Mental-Health-Predictor.git
+```
+### STEP 01- Create a conda environment after opening the repository
+
+```bash
+conda create -n MentalHealthPredictor python=3.12.0 -y
+```
+
+```bash
+conda activate MentalHealthPredictor
+```
+
+
+### STEP 02- install the requirements
+```bash
+pip install -r requirements.txt
+```
+
+## **********************************************************************************************
+
+# DEVELOPMENT STEPS
+
+## STAGE_01-> DATA INGESTION
+
+#### 1.Create an s3 bucket and upload the data in s3 bucket copy the key id.</br>
+
+```bash
+s3://mental-health-dataset-capstone/mental_health_dataset.csv
+```
+
+#### 2.Create an IAM user and give access to s3 on command line and download the access and secret key tokens to configure in cmd using aws configure </br>
+
+```bash
+AWS ACCESS KEY = Contact owner
+```
+
+```bash
+AWS SECRET KEY = Contact owner
+```
+```bash
+Default region name = us-east-1
+```
+
+```bash
+Default output format = "Press enter for json"
+```
+
+#### 3.Update the config.yaml file with correct config parameters of the aws 
+```bash
+artifacts_root: artifacts
+
+data_ingestion:
+  AWS_REGION: us-east-1
+  BUCKET_NAME: mental-health-dataset-capstone
+  S3_OBJECT_KEY: mental_health_dataset.csv
+  root_dir: artifacts/data_ingestion
+  LOCAL_DOWNLOAD_FILE: artifacts/data_ingestion/mental_health_dataset.csv 
+
+```
