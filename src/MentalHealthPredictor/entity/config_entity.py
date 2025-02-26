@@ -11,4 +11,7 @@ class DataIngestionConfig:
     LOCAL_DOWNLOAD_FILE: Path 
 
 
-
+@dataclass(frozen=True)
+class DataCleaningEncodingConfig:
+    input_file: Path
+    output_file: Path

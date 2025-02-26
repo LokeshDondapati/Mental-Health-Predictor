@@ -9,3 +9,152 @@
 [2025-02-19 16:59:12,408: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
 
 x==========x]
+[2025-02-19 22:00:25,634: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-02-19 22:00:25,636: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-19 22:00:25,638: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-19 22:00:25,638: INFO: common: created directory at: artifacts]
+[2025-02-19 22:00:25,639: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-19 22:00:25,730: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-02-19 22:00:26,096: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-19 22:00:28,912: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-19 22:00:28,914: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:35:43,849: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-02-26 12:35:43,851: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:35:43,861: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:35:43,862: INFO: common: created directory at: artifacts]
+[2025-02-26 12:35:43,862: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:35:43,887: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-02-26 12:35:44,356: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:35:45,916: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:35:45,920: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:35:45,920: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-02-26 12:35:45,921: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:35:45,922: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:35:45,922: INFO: common: created directory at: artifacts]
+[2025-02-26 12:35:45,922: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:35:45,922: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:40:00,777: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-02-26 12:40:00,779: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:40:00,780: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:40:00,780: INFO: common: created directory at: artifacts]
+[2025-02-26 12:40:00,780: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:40:00,795: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-02-26 12:40:00,982: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:40:02,441: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:40:02,446: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:40:02,447: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-02-26 12:40:02,449: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:40:02,450: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:40:02,450: INFO: common: created directory at: artifacts]
+[2025-02-26 12:40:02,450: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:40:02,451: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:43:33,758: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-02-26 12:43:33,760: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:43:33,761: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:43:33,761: INFO: common: created directory at: artifacts]
+[2025-02-26 12:43:33,762: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:43:33,778: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-02-26 12:43:33,970: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:43:35,466: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:43:35,468: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:43:35,469: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-02-26 12:43:35,470: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:43:35,472: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:43:35,472: INFO: common: created directory at: artifacts]
+[2025-02-26 12:43:35,473: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:43:35,473: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:45:23,943: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-02-26 12:45:23,964: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:45:23,975: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:45:23,975: INFO: common: created directory at: artifacts]
+[2025-02-26 12:45:23,976: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:45:24,014: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-02-26 12:45:24,186: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:45:25,817: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:45:25,821: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:45:25,821: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-02-26 12:45:25,823: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:45:25,824: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:45:25,824: INFO: common: created directory at: artifacts]
+[2025-02-26 12:45:25,824: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:45:25,825: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:46:08,044: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-02-26 12:46:08,046: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:46:08,047: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:46:08,047: INFO: common: created directory at: artifacts]
+[2025-02-26 12:46:08,047: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:46:08,062: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-02-26 12:46:08,242: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:46:09,710: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:46:09,713: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:46:09,715: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-02-26 12:46:09,717: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:46:09,717: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:46:09,718: INFO: common: created directory at: artifacts]
+[2025-02-26 12:46:09,718: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:46:09,718: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:49:13,231: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-02-26 12:49:13,233: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:49:13,234: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:49:13,235: INFO: common: created directory at: artifacts]
+[2025-02-26 12:49:13,235: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:49:13,250: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-02-26 12:49:13,424: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:49:14,874: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:49:14,877: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:49:14,878: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-02-26 12:49:14,880: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:49:14,881: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:49:14,881: INFO: common: created directory at: artifacts]
+[2025-02-26 12:49:14,882: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:49:14,882: ERROR: data_cleaning_encoding: Error loading data: 'DataIngestionConfig' object has no attribute 'input_file']
+[2025-02-26 12:54:52,263: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-02-26 12:54:52,265: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:54:52,267: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:54:52,267: INFO: common: created directory at: artifacts]
+[2025-02-26 12:54:52,267: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-26 12:54:52,285: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-02-26 12:54:52,459: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:54:53,879: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:54:53,883: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-02-26 12:54:53,883: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-02-26 12:54:53,886: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-26 12:54:53,886: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-26 12:54:53,887: INFO: common: created directory at: artifacts]
+[2025-02-26 12:54:53,887: INFO: data_cleaning_encoding: Loading data from artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-02-26 12:54:53,902: INFO: data_cleaning_encoding: Data loaded successfully with shape (1000, 12)]
+[2025-02-26 12:54:53,902: INFO: data_cleaning_encoding: Cleaning data...]
+[2025-02-26 12:54:53,903: INFO: data_cleaning_encoding: Data cleaned, new shape: (1000, 12)]
+[2025-02-26 12:54:53,913: INFO: data_cleaning_encoding: Directory artifacts\data_cleaning_encoded checked/created successfully.]
+[2025-02-26 12:54:53,913: INFO: data_cleaning_encoding: Saving data to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-02-26 12:54:53,919: INFO: data_cleaning_encoding: Test file saved to artifacts\data_cleaning_encoded\test_file.csv]
+[2025-02-26 12:54:53,934: INFO: data_cleaning_encoding: Data saved successfully to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-02-26 12:54:53,935: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
+
+x==========x]

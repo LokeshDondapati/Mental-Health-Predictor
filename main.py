@@ -1,6 +1,7 @@
 from MentalHealthPredictor import logger
 from MentalHealthPredictor.config.configuration import ConfigurationManager
 from MentalHealthPredictor.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
+from MentalHealthPredictor.pipeline.stage_02_data_cleaning_encoding import DataCleaningEncodingPipeline
 
 import pandas as pd
 from MentalHealthPredictor.utils.common import remove_pycache
@@ -29,3 +30,4 @@ def run_pipeline(stage_name, pipeline_class):
 
 # **Execute Data Pipeline Stages**
 run_pipeline("Data Ingestion Stage", DataIngestionTrainingPipeline)
+run_pipeline("Data Cleaning and Encoding Stage", DataCleaningEncodingPipeline)
