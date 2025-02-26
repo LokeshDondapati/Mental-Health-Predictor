@@ -70,7 +70,7 @@ data_ingestion:
 ```
 
 
-## STAGE_01-> DATA CLEANING AND ENCODING
+## STAGE_02-> DATA CLEANING AND ENCODING
 
 #### Update the config.yaml file with correct config parameters of the aws 
 ```bash
