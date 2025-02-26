@@ -1,7 +1,7 @@
 from MentalHealthPredictor.constants import *
 import os
 from MentalHealthPredictor.utils.common import read_yaml, create_directories, save_json
-from MentalHealthPredictor.entity.config_entity import DataIngestionConfig
+from MentalHealthPredictor.entity.config_entity import DataIngestionConfig, DataCleaningEncodingConfig
 from pathlib import Path
 
 class ConfigurationManager:
@@ -30,3 +30,15 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+    
+    def get_data_cleaning_encoding_config(self) -> DataCleaningEncodingConfig:
+            config = self.config["data_cleaning_encoding"]
+            return DataCleaningEncodingConfig(
+                input_file=Path(config["input_file"]),
+                output_file=Path(config["output_file"])
+            )
+    
+
+    
+
+        

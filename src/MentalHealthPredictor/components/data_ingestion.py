@@ -1,8 +1,8 @@
 import boto3
 import os
 from pathlib import Path
-from ObesityPredictor import logger
-from ObesityPredictor.config.configuration import DataIngestionConfig
+from MentalHealthPredictor import logger
+from MentalHealthPredictor.config.configuration import DataIngestionConfig
 
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
