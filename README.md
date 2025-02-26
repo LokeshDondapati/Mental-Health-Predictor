@@ -68,3 +68,14 @@ data_ingestion:
   LOCAL_DOWNLOAD_FILE: artifacts/data_ingestion/mental_health_dataset.csv 
 
 ```
+
+
+## STAGE_01-> DATA CLEANING AND ENCODING
+
+#### Update the config.yaml file with correct config parameters of the aws 
+```bash
+artifacts_root: artifacts
+
+data_cleaning_encoding:
+  input_file: artifacts/data_ingestion/mental_health_dataset.csv  # ✅ The ingested file is used as input
+  output_file: artifacts/data_cleaning_encoded/cleaned_encoded_data.csv  # ✅ Save cleaned & encoded data here
