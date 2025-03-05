@@ -158,3 +158,183 @@ x==========x]
 [2025-02-26 12:54:53,935: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
 
 x==========x]
+[2025-03-05 15:38:59,962: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 15:38:59,965: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:38:59,979: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:38:59,980: INFO: common: created directory at: artifacts]
+[2025-03-05 15:38:59,980: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 15:38:59,996: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-03-05 15:39:00,175: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:39:01,611: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:39:01,614: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 15:39:01,614: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-03-05 15:39:01,616: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:39:01,617: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:39:01,618: INFO: common: created directory at: artifacts]
+[2025-03-05 15:39:01,618: INFO: data_cleaning_encoding: Loading data from artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:39:01,642: INFO: data_cleaning_encoding: Data loaded successfully with shape (1000, 12)]
+[2025-03-05 15:39:01,643: INFO: data_cleaning_encoding: Cleaning data...]
+[2025-03-05 15:39:01,643: INFO: data_cleaning_encoding: Data cleaned, new shape: (1000, 12)]
+[2025-03-05 15:39:01,653: INFO: data_cleaning_encoding: Directory artifacts\data_cleaning_encoded checked/created successfully.]
+[2025-03-05 15:39:01,654: INFO: data_cleaning_encoding: Saving data to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-03-05 15:39:01,657: INFO: data_cleaning_encoding: Test file saved to artifacts\data_cleaning_encoded\test_file.csv]
+[2025-03-05 15:39:01,676: INFO: data_cleaning_encoding: Data saved successfully to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-03-05 15:39:01,676: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 15:44:26,194: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 15:44:26,199: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:44:26,200: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:44:26,201: INFO: common: created directory at: artifacts]
+[2025-03-05 15:44:26,201: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 15:44:26,222: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-03-05 15:44:26,438: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:44:27,805: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:44:27,809: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 15:44:27,809: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-03-05 15:44:27,814: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:44:27,815: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:44:27,815: INFO: common: created directory at: artifacts]
+[2025-03-05 15:44:27,815: INFO: data_cleaning_encoding: Loading data from artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:44:27,837: INFO: data_cleaning_encoding: Data loaded successfully with shape (1000, 12)]
+[2025-03-05 15:44:27,837: INFO: data_cleaning_encoding: Cleaning data...]
+[2025-03-05 15:44:27,837: INFO: data_cleaning_encoding: Data cleaned, new shape: (1000, 12)]
+[2025-03-05 15:44:27,846: INFO: data_cleaning_encoding: Directory artifacts\data_cleaning_encoded checked/created successfully.]
+[2025-03-05 15:44:27,846: INFO: data_cleaning_encoding: Saving data to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-03-05 15:44:27,850: INFO: data_cleaning_encoding: Test file saved to artifacts\data_cleaning_encoded\test_file.csv]
+[2025-03-05 15:44:27,865: INFO: data_cleaning_encoding: Data saved successfully to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-03-05 15:44:27,866: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 15:44:27,866: INFO: main: >>>>>> Stage Model Training Stage started <<<<<<]
+[2025-03-05 15:44:27,870: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:44:27,871: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:44:27,872: INFO: common: created directory at: artifacts]
+[2025-03-05 15:44:27,873: INFO: common: created directory at: artifacts\model_training]
+[2025-03-05 15:44:27,873: INFO: common: created directory at: artifacts\model_training\trained_models]
+[2025-03-05 15:44:27,898: INFO: model_training: Data shape before cleaning: (1000, 29)]
+[2025-03-05 15:44:27,898: ERROR: model_training: Error in model training: ['Mental_Health_Condition']]
+[2025-03-05 15:52:02,386: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 15:52:02,392: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:52:02,393: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:52:02,393: INFO: common: created directory at: artifacts]
+[2025-03-05 15:52:02,394: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 15:52:02,409: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-03-05 15:52:02,611: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:52:03,972: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:52:03,976: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 15:52:03,977: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-03-05 15:52:03,982: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:52:03,983: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:52:03,983: INFO: common: created directory at: artifacts]
+[2025-03-05 15:52:03,983: INFO: data_cleaning_encoding: Loading data from artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:52:04,008: INFO: data_cleaning_encoding: Data loaded successfully with shape (1000, 12)]
+[2025-03-05 15:52:04,008: INFO: data_cleaning_encoding: Cleaning data...]
+[2025-03-05 15:52:04,008: INFO: data_cleaning_encoding: Data cleaned, new shape: (1000, 12)]
+[2025-03-05 15:52:04,019: INFO: data_cleaning_encoding: Directory artifacts\data_cleaning_encoded checked/created successfully.]
+[2025-03-05 15:52:04,019: INFO: data_cleaning_encoding: Saving data to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-03-05 15:52:04,023: INFO: data_cleaning_encoding: Test file saved to artifacts\data_cleaning_encoded\test_file.csv]
+[2025-03-05 15:52:04,051: INFO: data_cleaning_encoding: Data saved successfully to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-03-05 15:52:04,051: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 15:52:04,051: INFO: main: >>>>>> Stage Model Training Stage started <<<<<<]
+[2025-03-05 15:52:04,055: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:52:04,056: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:52:04,056: INFO: common: created directory at: artifacts]
+[2025-03-05 15:52:04,057: INFO: common: created directory at: artifacts\model_training]
+[2025-03-05 15:52:04,057: INFO: common: created directory at: artifacts\model_training\trained_models]
+[2025-03-05 15:52:04,086: INFO: model_training: Data shape before cleaning: (1000, 29)]
+[2025-03-05 15:52:04,089: INFO: model_training: Data shape after cleaning: (499, 29)]
+[2025-03-05 15:52:04,090: INFO: model_training: 
+========================================]
+[2025-03-05 15:52:04,090: INFO: model_training: Training models for target: Mental_Health_Condition_Yes]
+[2025-03-05 15:52:04,090: INFO: model_training: ========================================]
+[2025-03-05 15:52:04,092: INFO: model_training: Missing values in features: 0]
+[2025-03-05 15:52:04,092: INFO: model_training: Missing values in target: 0]
+[2025-03-05 15:52:04,095: INFO: model_training: 
+--- Tuning LogisticRegression ---]
+[2025-03-05 15:52:06,967: INFO: model_training: Saved LogisticRegression for Mental_Health_Condition_Yes]
+[2025-03-05 15:52:06,968: INFO: model_training: 
+--- Tuning DecisionTree ---]
+[2025-03-05 15:52:08,801: INFO: model_training: Saved DecisionTree for Mental_Health_Condition_Yes]
+[2025-03-05 15:52:08,801: INFO: model_training: 
+--- Tuning SVC ---]
+[2025-03-05 15:52:08,869: INFO: model_training: Saved SVC for Mental_Health_Condition_Yes]
+[2025-03-05 15:52:08,869: INFO: model_training: 
+--- Tuning RandomForest ---]
+[2025-03-05 15:52:09,217: INFO: model_training: Saved RandomForest for Mental_Health_Condition_Yes]
+[2025-03-05 15:52:09,217: INFO: model_training: 
+--- Tuning GradientBoosting ---]
+[2025-03-05 15:52:09,404: INFO: model_training: Saved GradientBoosting for Mental_Health_Condition_Yes]
+[2025-03-05 15:52:09,405: INFO: model_training: 
+--- Tuning KNeighbors ---]
+[2025-03-05 15:52:09,760: INFO: model_training: Saved KNeighbors for Mental_Health_Condition_Yes]
+[2025-03-05 15:52:09,760: INFO: model_training: 
+--- Tuning NaiveBayes ---]
+[2025-03-05 15:52:09,810: INFO: model_training: Saved NaiveBayes for Mental_Health_Condition_Yes]
+[2025-03-05 15:52:09,811: INFO: model_training: 
+========================================]
+[2025-03-05 15:52:09,811: INFO: model_training: Training models for target: Severity]
+[2025-03-05 15:52:09,811: INFO: model_training: ========================================]
+[2025-03-05 15:52:09,813: INFO: model_training: Missing values in features: 0]
+[2025-03-05 15:52:09,813: INFO: model_training: Missing values in target: 0]
+[2025-03-05 15:52:09,815: INFO: model_training: 
+--- Tuning LogisticRegression ---]
+[2025-03-05 15:52:09,883: INFO: model_training: Saved LogisticRegression for Severity]
+[2025-03-05 15:52:09,883: INFO: model_training: 
+--- Tuning DecisionTree ---]
+[2025-03-05 15:52:09,955: INFO: model_training: Saved DecisionTree for Severity]
+[2025-03-05 15:52:09,955: INFO: model_training: 
+--- Tuning SVC ---]
+[2025-03-05 15:52:10,010: INFO: model_training: Saved SVC for Severity]
+[2025-03-05 15:52:10,010: INFO: model_training: 
+--- Tuning RandomForest ---]
+[2025-03-05 15:52:10,394: INFO: model_training: Saved RandomForest for Severity]
+[2025-03-05 15:52:10,394: INFO: model_training: 
+--- Tuning GradientBoosting ---]
+[2025-03-05 15:52:10,836: INFO: model_training: Saved GradientBoosting for Severity]
+[2025-03-05 15:52:10,837: INFO: model_training: 
+--- Tuning KNeighbors ---]
+[2025-03-05 15:52:10,911: INFO: model_training: Saved KNeighbors for Severity]
+[2025-03-05 15:52:10,911: INFO: model_training: 
+--- Tuning NaiveBayes ---]
+[2025-03-05 15:52:10,968: INFO: model_training: Saved NaiveBayes for Severity]
+[2025-03-05 15:52:10,969: INFO: model_training: 
+========================================]
+[2025-03-05 15:52:10,969: INFO: model_training: Training models for target: Stress_Level]
+[2025-03-05 15:52:10,969: INFO: model_training: ========================================]
+[2025-03-05 15:52:10,971: INFO: model_training: Missing values in features: 0]
+[2025-03-05 15:52:10,971: INFO: model_training: Missing values in target: 0]
+[2025-03-05 15:52:10,974: INFO: model_training: 
+--- Tuning LogisticRegression ---]
+[2025-03-05 15:52:11,041: INFO: model_training: Saved LogisticRegression for Stress_Level]
+[2025-03-05 15:52:11,041: INFO: model_training: 
+--- Tuning DecisionTree ---]
+[2025-03-05 15:52:11,100: INFO: model_training: Saved DecisionTree for Stress_Level]
+[2025-03-05 15:52:11,101: INFO: model_training: 
+--- Tuning SVC ---]
+[2025-03-05 15:52:11,169: INFO: model_training: Saved SVC for Stress_Level]
+[2025-03-05 15:52:11,169: INFO: model_training: 
+--- Tuning RandomForest ---]
+[2025-03-05 15:52:11,522: INFO: model_training: Saved RandomForest for Stress_Level]
+[2025-03-05 15:52:11,522: INFO: model_training: 
+--- Tuning GradientBoosting ---]
+[2025-03-05 15:52:12,031: INFO: model_training: Saved GradientBoosting for Stress_Level]
+[2025-03-05 15:52:12,032: INFO: model_training: 
+--- Tuning KNeighbors ---]
+[2025-03-05 15:52:12,106: INFO: model_training: Saved KNeighbors for Stress_Level]
+[2025-03-05 15:52:12,106: INFO: model_training: 
+--- Tuning NaiveBayes ---]
+[2025-03-05 15:52:12,150: INFO: model_training: Saved NaiveBayes for Stress_Level]
+[2025-03-05 15:52:12,152: INFO: model_training: 
+Saved training results to artifacts\model_training\training_results.csv]
+[2025-03-05 15:52:12,153: INFO: main: >>>>>> Stage Model Training Stage completed <<<<<<
+
+x==========x]

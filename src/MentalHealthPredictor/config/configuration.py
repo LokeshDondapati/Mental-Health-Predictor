@@ -1,7 +1,7 @@
 from MentalHealthPredictor.constants import *
 import os
 from MentalHealthPredictor.utils.common import read_yaml, create_directories, save_json
-from MentalHealthPredictor.entity.config_entity import DataIngestionConfig, DataCleaningEncodingConfig
+from MentalHealthPredictor.entity.config_entity import DataIngestionConfig, DataCleaningEncodingConfig,ModelTrainingConfig
 from pathlib import Path
 
 class ConfigurationManager:
@@ -41,4 +41,20 @@ class ConfigurationManager:
 
     
 
+    # Add this new method for model training
+    def get_model_training_config(self) -> ModelTrainingConfig:
+        config = self.config["model_training"]
         
+        # Create required directories
+        output_dir = Path(config["output_dir"])
+        models_dir = output_dir / "trained_models"
+        create_directories([output_dir, models_dir])
+
+        return ModelTrainingConfig(
+            input_file=Path(config["input_file"]),
+            output_dir=output_dir,
+            target_columns=config["target_columns"],
+            test_size=config["test_size"],
+            random_state=config["random_state"],
+            hyperparam_grids=config["hyperparam_grids"]
+        )
