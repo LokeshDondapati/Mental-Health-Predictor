@@ -79,3 +79,40 @@ artifacts_root: artifacts
 data_cleaning_encoding:
   input_file: artifacts/data_ingestion/mental_health_dataset.csv  # ✅ The ingested file is used as input
   output_file: artifacts/data_cleaning_encoded/cleaned_encoded_data.csv  # ✅ Save cleaned & encoded data here
+
+
+## STAGE_03-> MODEL TRAINING
+
+#### Update the config.yaml file with correct config parameters of the aws 
+```bash
+model_training:
+  input_file: artifacts/data_cleaning_encoded/cleaned_encoded_data.csv
+  output_dir: artifacts/model_training
+  target_columns:
+    - Mental_Health_Condition_Yes  # Corrected column name
+    - Severity
+    - Stress_Level
+  test_size: 0.2
+  random_state: 42
+  hyperparam_grids:
+    LogisticRegression:
+      C: [0.1, 1, 10]
+    DecisionTree:
+      max_depth: [null, 5]
+      min_samples_split: [2, 5]
+    SVC:
+      C: [0.1, 1]
+      kernel: [linear, rbf]
+    RandomForest:
+      n_estimators: [50, 100]
+      max_depth: [null, 5]
+    GradientBoosting:
+      n_estimators: [50, 100]
+      learning_rate: [0.01, 0.1]
+    KNeighbors:
+      n_neighbors: [3, 5]
+      weights: [uniform, distance]
+    NaiveBayes:
+      var_smoothing: [1e-9, 1e-8]
+
+
