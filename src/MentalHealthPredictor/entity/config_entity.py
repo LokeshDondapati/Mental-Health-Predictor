@@ -28,3 +28,10 @@ class ModelTrainingConfig:
 
     def __post_init__(self):
         object.__setattr__(self, 'models_dir', self.output_dir / "trained_models")
+
+@dataclass(frozen=True)
+class ModelInferenceConfig:
+    model_dir: Path
+    input_data: Path
+    output_dir: Path
+    target_columns: List[str]

@@ -338,3 +338,408 @@ Saved training results to artifacts\model_training\training_results.csv]
 [2025-03-05 15:52:12,153: INFO: main: >>>>>> Stage Model Training Stage completed <<<<<<
 
 x==========x]
+[2025-03-05 15:59:35,581: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 15:59:35,586: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:59:35,587: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:59:35,588: INFO: common: created directory at: artifacts]
+[2025-03-05 15:59:35,588: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 15:59:35,603: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-03-05 15:59:35,778: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:59:37,197: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:59:37,201: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 15:59:37,201: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-03-05 15:59:37,206: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:59:37,208: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:59:37,208: INFO: common: created directory at: artifacts]
+[2025-03-05 15:59:37,208: INFO: data_cleaning_encoding: Loading data from artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 15:59:37,234: INFO: data_cleaning_encoding: Data loaded successfully with shape (1000, 12)]
+[2025-03-05 15:59:37,234: INFO: data_cleaning_encoding: Cleaning data...]
+[2025-03-05 15:59:37,234: INFO: data_cleaning_encoding: Data cleaned, new shape: (1000, 12)]
+[2025-03-05 15:59:37,245: INFO: data_cleaning_encoding: Directory artifacts\data_cleaning_encoded checked/created successfully.]
+[2025-03-05 15:59:37,246: INFO: data_cleaning_encoding: Saving data to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-03-05 15:59:37,249: INFO: data_cleaning_encoding: Test file saved to artifacts\data_cleaning_encoded\test_file.csv]
+[2025-03-05 15:59:37,269: INFO: data_cleaning_encoding: Data saved successfully to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-03-05 15:59:37,270: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 15:59:37,270: INFO: main: >>>>>> Stage Model Training Stage started <<<<<<]
+[2025-03-05 15:59:37,274: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:59:37,276: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:59:37,276: INFO: common: created directory at: artifacts]
+[2025-03-05 15:59:37,277: INFO: common: created directory at: artifacts\model_training]
+[2025-03-05 15:59:37,277: INFO: common: created directory at: artifacts\model_training\trained_models]
+[2025-03-05 15:59:37,307: INFO: model_training: Data shape before cleaning: (1000, 29)]
+[2025-03-05 15:59:37,311: INFO: model_training: Data shape after cleaning: (499, 29)]
+[2025-03-05 15:59:37,311: INFO: model_training: 
+========================================]
+[2025-03-05 15:59:37,311: INFO: model_training: Training models for target: Mental_Health_Condition_Yes]
+[2025-03-05 15:59:37,311: INFO: model_training: ========================================]
+[2025-03-05 15:59:37,312: INFO: model_training: Missing values in features: 0]
+[2025-03-05 15:59:37,313: INFO: model_training: Missing values in target: 0]
+[2025-03-05 15:59:37,316: INFO: model_training: 
+--- Tuning LogisticRegression ---]
+[2025-03-05 15:59:40,724: INFO: model_training: Saved LogisticRegression for Mental_Health_Condition_Yes]
+[2025-03-05 15:59:40,724: INFO: model_training: 
+--- Tuning DecisionTree ---]
+[2025-03-05 15:59:42,523: INFO: model_training: Saved DecisionTree for Mental_Health_Condition_Yes]
+[2025-03-05 15:59:42,523: INFO: model_training: 
+--- Tuning SVC ---]
+[2025-03-05 15:59:42,594: INFO: model_training: Saved SVC for Mental_Health_Condition_Yes]
+[2025-03-05 15:59:42,594: INFO: model_training: 
+--- Tuning RandomForest ---]
+[2025-03-05 15:59:42,931: INFO: model_training: Saved RandomForest for Mental_Health_Condition_Yes]
+[2025-03-05 15:59:42,931: INFO: model_training: 
+--- Tuning GradientBoosting ---]
+[2025-03-05 15:59:43,097: INFO: model_training: Saved GradientBoosting for Mental_Health_Condition_Yes]
+[2025-03-05 15:59:43,098: INFO: model_training: 
+--- Tuning KNeighbors ---]
+[2025-03-05 15:59:43,441: INFO: model_training: Saved KNeighbors for Mental_Health_Condition_Yes]
+[2025-03-05 15:59:43,441: INFO: model_training: 
+--- Tuning NaiveBayes ---]
+[2025-03-05 15:59:43,482: INFO: model_training: Saved NaiveBayes for Mental_Health_Condition_Yes]
+[2025-03-05 15:59:43,483: INFO: model_training: 
+========================================]
+[2025-03-05 15:59:43,483: INFO: model_training: Training models for target: Severity]
+[2025-03-05 15:59:43,483: INFO: model_training: ========================================]
+[2025-03-05 15:59:43,484: INFO: model_training: Missing values in features: 0]
+[2025-03-05 15:59:43,484: INFO: model_training: Missing values in target: 0]
+[2025-03-05 15:59:43,487: INFO: model_training: 
+--- Tuning LogisticRegression ---]
+[2025-03-05 15:59:43,558: INFO: model_training: Saved LogisticRegression for Severity]
+[2025-03-05 15:59:43,558: INFO: model_training: 
+--- Tuning DecisionTree ---]
+[2025-03-05 15:59:43,633: INFO: model_training: Saved DecisionTree for Severity]
+[2025-03-05 15:59:43,634: INFO: model_training: 
+--- Tuning SVC ---]
+[2025-03-05 15:59:43,711: INFO: model_training: Saved SVC for Severity]
+[2025-03-05 15:59:43,712: INFO: model_training: 
+--- Tuning RandomForest ---]
+[2025-03-05 15:59:44,004: INFO: model_training: Saved RandomForest for Severity]
+[2025-03-05 15:59:44,007: INFO: model_training: 
+--- Tuning GradientBoosting ---]
+[2025-03-05 15:59:44,528: INFO: model_training: Saved GradientBoosting for Severity]
+[2025-03-05 15:59:44,529: INFO: model_training: 
+--- Tuning KNeighbors ---]
+[2025-03-05 15:59:44,593: INFO: model_training: Saved KNeighbors for Severity]
+[2025-03-05 15:59:44,593: INFO: model_training: 
+--- Tuning NaiveBayes ---]
+[2025-03-05 15:59:44,637: INFO: model_training: Saved NaiveBayes for Severity]
+[2025-03-05 15:59:44,638: INFO: model_training: 
+========================================]
+[2025-03-05 15:59:44,638: INFO: model_training: Training models for target: Stress_Level]
+[2025-03-05 15:59:44,638: INFO: model_training: ========================================]
+[2025-03-05 15:59:44,639: INFO: model_training: Missing values in features: 0]
+[2025-03-05 15:59:44,639: INFO: model_training: Missing values in target: 0]
+[2025-03-05 15:59:44,642: INFO: model_training: 
+--- Tuning LogisticRegression ---]
+[2025-03-05 15:59:44,708: INFO: model_training: Saved LogisticRegression for Stress_Level]
+[2025-03-05 15:59:44,708: INFO: model_training: 
+--- Tuning DecisionTree ---]
+[2025-03-05 15:59:44,772: INFO: model_training: Saved DecisionTree for Stress_Level]
+[2025-03-05 15:59:44,772: INFO: model_training: 
+--- Tuning SVC ---]
+[2025-03-05 15:59:44,833: INFO: model_training: Saved SVC for Stress_Level]
+[2025-03-05 15:59:44,834: INFO: model_training: 
+--- Tuning RandomForest ---]
+[2025-03-05 15:59:45,242: INFO: model_training: Saved RandomForest for Stress_Level]
+[2025-03-05 15:59:45,243: INFO: model_training: 
+--- Tuning GradientBoosting ---]
+[2025-03-05 15:59:45,730: INFO: model_training: Saved GradientBoosting for Stress_Level]
+[2025-03-05 15:59:45,731: INFO: model_training: 
+--- Tuning KNeighbors ---]
+[2025-03-05 15:59:45,796: INFO: model_training: Saved KNeighbors for Stress_Level]
+[2025-03-05 15:59:45,796: INFO: model_training: 
+--- Tuning NaiveBayes ---]
+[2025-03-05 15:59:45,833: INFO: model_training: Saved NaiveBayes for Stress_Level]
+[2025-03-05 15:59:45,836: INFO: model_training: 
+Saved training results to artifacts\model_training\training_results.csv]
+[2025-03-05 15:59:45,837: INFO: main: >>>>>> Stage Model Training Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 15:59:45,837: INFO: main: >>>>>> Stage Model Inference Stage started <<<<<<]
+[2025-03-05 15:59:45,842: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 15:59:45,843: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 15:59:45,844: INFO: common: created directory at: artifacts]
+[2025-03-05 15:59:45,844: INFO: common: created directory at: artifacts/model_inference]
+[2025-03-05 15:59:45,857: INFO: inference: Loaded model: Mental_Health_Condition_Yes_DecisionTree]
+[2025-03-05 15:59:45,874: INFO: inference: Loaded model: Mental_Health_Condition_Yes_GradientBoosting]
+[2025-03-05 15:59:45,888: INFO: inference: Loaded model: Mental_Health_Condition_Yes_KNeighbors]
+[2025-03-05 15:59:45,897: INFO: inference: Loaded model: Mental_Health_Condition_Yes_LogisticRegression]
+[2025-03-05 15:59:45,905: INFO: inference: Loaded model: Mental_Health_Condition_Yes_NaiveBayes]
+[2025-03-05 15:59:45,928: INFO: inference: Loaded model: Mental_Health_Condition_Yes_RandomForest]
+[2025-03-05 15:59:45,945: INFO: inference: Loaded model: Mental_Health_Condition_Yes_SVC]
+[2025-03-05 15:59:45,959: INFO: inference: Loaded model: Severity_DecisionTree]
+[2025-03-05 15:59:45,981: INFO: inference: Loaded model: Severity_GradientBoosting]
+[2025-03-05 15:59:45,998: INFO: inference: Loaded model: Severity_KNeighbors]
+[2025-03-05 15:59:46,013: INFO: inference: Loaded model: Severity_LogisticRegression]
+[2025-03-05 15:59:46,029: INFO: inference: Loaded model: Severity_NaiveBayes]
+[2025-03-05 15:59:46,057: INFO: inference: Loaded model: Severity_RandomForest]
+[2025-03-05 15:59:46,074: INFO: inference: Loaded model: Severity_SVC]
+[2025-03-05 15:59:46,086: INFO: inference: Loaded model: Stress_Level_DecisionTree]
+[2025-03-05 15:59:46,109: INFO: inference: Loaded model: Stress_Level_GradientBoosting]
+[2025-03-05 15:59:46,126: INFO: inference: Loaded model: Stress_Level_KNeighbors]
+[2025-03-05 15:59:46,141: INFO: inference: Loaded model: Stress_Level_LogisticRegression]
+[2025-03-05 15:59:46,155: INFO: inference: Loaded model: Stress_Level_NaiveBayes]
+[2025-03-05 15:59:46,191: INFO: inference: Loaded model: Stress_Level_RandomForest]
+[2025-03-05 15:59:46,209: INFO: inference: Loaded model: Stress_Level_SVC]
+[2025-03-05 15:59:46,214: ERROR: inference: Prediction failed for Mental_Health_Condition_Yes_DecisionTree: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Mental_Health_Condition_Yes
+]
+[2025-03-05 15:59:46,215: ERROR: inference: Prediction failed for Mental_Health_Condition_Yes_GradientBoosting: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Mental_Health_Condition_Yes
+]
+[2025-03-05 15:59:46,215: ERROR: inference: Prediction failed for Mental_Health_Condition_Yes_KNeighbors: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Mental_Health_Condition_Yes
+]
+[2025-03-05 15:59:46,215: ERROR: inference: Prediction failed for Mental_Health_Condition_Yes_LogisticRegression: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Mental_Health_Condition_Yes
+]
+[2025-03-05 15:59:46,216: ERROR: inference: Prediction failed for Mental_Health_Condition_Yes_NaiveBayes: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Mental_Health_Condition_Yes
+]
+[2025-03-05 15:59:46,216: ERROR: inference: Prediction failed for Mental_Health_Condition_Yes_RandomForest: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Mental_Health_Condition_Yes
+]
+[2025-03-05 15:59:46,216: ERROR: inference: Prediction failed for Mental_Health_Condition_Yes_SVC: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Mental_Health_Condition_Yes
+]
+[2025-03-05 15:59:46,217: ERROR: inference: Prediction failed for Severity_DecisionTree: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Severity
+]
+[2025-03-05 15:59:46,217: ERROR: inference: Prediction failed for Severity_GradientBoosting: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Severity
+]
+[2025-03-05 15:59:46,217: ERROR: inference: Prediction failed for Severity_KNeighbors: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Severity
+]
+[2025-03-05 15:59:46,218: ERROR: inference: Prediction failed for Severity_LogisticRegression: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Severity
+]
+[2025-03-05 15:59:46,218: ERROR: inference: Prediction failed for Severity_NaiveBayes: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Severity
+]
+[2025-03-05 15:59:46,218: ERROR: inference: Prediction failed for Severity_RandomForest: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Severity
+]
+[2025-03-05 15:59:46,218: ERROR: inference: Prediction failed for Severity_SVC: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Severity
+]
+[2025-03-05 15:59:46,219: ERROR: inference: Prediction failed for Stress_Level_DecisionTree: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Stress_Level
+]
+[2025-03-05 15:59:46,219: ERROR: inference: Prediction failed for Stress_Level_GradientBoosting: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Stress_Level
+]
+[2025-03-05 15:59:46,219: ERROR: inference: Prediction failed for Stress_Level_KNeighbors: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Stress_Level
+]
+[2025-03-05 15:59:46,220: ERROR: inference: Prediction failed for Stress_Level_LogisticRegression: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Stress_Level
+]
+[2025-03-05 15:59:46,220: ERROR: inference: Prediction failed for Stress_Level_NaiveBayes: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Stress_Level
+]
+[2025-03-05 15:59:46,221: ERROR: inference: Prediction failed for Stress_Level_RandomForest: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Stress_Level
+]
+[2025-03-05 15:59:46,221: ERROR: inference: Prediction failed for Stress_Level_SVC: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Stress_Level
+]
+[2025-03-05 15:59:46,223: INFO: inference: Saved inference results to artifacts\model_inference\inference_results.csv]
+[2025-03-05 15:59:46,224: INFO: main: >>>>>> Stage Model Inference Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 16:08:51,521: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 16:08:51,527: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 16:08:51,528: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 16:08:51,529: INFO: common: created directory at: artifacts]
+[2025-03-05 16:08:51,529: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 16:08:51,543: INFO: credentials: Found credentials in shared credentials file: ~/.aws/credentials]
+[2025-03-05 16:08:51,745: INFO: data_ingestion: Downloading mental_health_dataset.csv from S3 bucket mental-health-dataset-capstone to artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 16:08:53,255: INFO: data_ingestion: File downloaded successfully: artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 16:08:53,257: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 16:08:53,257: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage started <<<<<<]
+[2025-03-05 16:08:53,264: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 16:08:53,265: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 16:08:53,265: INFO: common: created directory at: artifacts]
+[2025-03-05 16:08:53,266: INFO: data_cleaning_encoding: Loading data from artifacts\data_ingestion\mental_health_dataset.csv]
+[2025-03-05 16:08:53,283: INFO: data_cleaning_encoding: Data loaded successfully with shape (1000, 12)]
+[2025-03-05 16:08:53,283: INFO: data_cleaning_encoding: Cleaning data...]
+[2025-03-05 16:08:53,283: INFO: data_cleaning_encoding: Data cleaned, new shape: (1000, 12)]
+[2025-03-05 16:08:53,295: INFO: data_cleaning_encoding: Directory artifacts\data_cleaning_encoded checked/created successfully.]
+[2025-03-05 16:08:53,295: INFO: data_cleaning_encoding: Saving data to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-03-05 16:08:53,299: INFO: data_cleaning_encoding: Test file saved to artifacts\data_cleaning_encoded\test_file.csv]
+[2025-03-05 16:08:53,316: INFO: data_cleaning_encoding: Data saved successfully to artifacts\data_cleaning_encoded\cleaned_encoded_data.csv]
+[2025-03-05 16:08:53,316: INFO: main: >>>>>> Stage Data Cleaning and Encoding Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 16:08:53,318: INFO: main: >>>>>> Stage Model Training Stage started <<<<<<]
+[2025-03-05 16:08:53,322: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 16:08:53,322: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 16:08:53,323: INFO: common: created directory at: artifacts]
+[2025-03-05 16:08:53,323: INFO: common: created directory at: artifacts\model_training]
+[2025-03-05 16:08:53,323: INFO: common: created directory at: artifacts\model_training\trained_models]
+[2025-03-05 16:08:53,346: INFO: model_training: Data shape before cleaning: (1000, 29)]
+[2025-03-05 16:08:53,349: INFO: model_training: Data shape after cleaning: (499, 29)]
+[2025-03-05 16:08:53,349: INFO: model_training: 
+========================================]
+[2025-03-05 16:08:53,349: INFO: model_training: Training models for target: Mental_Health_Condition_Yes]
+[2025-03-05 16:08:53,351: INFO: model_training: ========================================]
+[2025-03-05 16:08:53,351: INFO: model_training: Missing values in features: 0]
+[2025-03-05 16:08:53,352: INFO: model_training: Missing values in target: 0]
+[2025-03-05 16:08:53,354: INFO: model_training: 
+--- Tuning LogisticRegression ---]
+[2025-03-05 16:08:56,572: INFO: model_training: Saved LogisticRegression for Mental_Health_Condition_Yes]
+[2025-03-05 16:08:56,572: INFO: model_training: 
+--- Tuning DecisionTree ---]
+[2025-03-05 16:08:58,399: INFO: model_training: Saved DecisionTree for Mental_Health_Condition_Yes]
+[2025-03-05 16:08:58,399: INFO: model_training: 
+--- Tuning SVC ---]
+[2025-03-05 16:08:58,472: INFO: model_training: Saved SVC for Mental_Health_Condition_Yes]
+[2025-03-05 16:08:58,472: INFO: model_training: 
+--- Tuning RandomForest ---]
+[2025-03-05 16:08:58,806: INFO: model_training: Saved RandomForest for Mental_Health_Condition_Yes]
+[2025-03-05 16:08:58,807: INFO: model_training: 
+--- Tuning GradientBoosting ---]
+[2025-03-05 16:08:59,101: INFO: model_training: Saved GradientBoosting for Mental_Health_Condition_Yes]
+[2025-03-05 16:08:59,101: INFO: model_training: 
+--- Tuning KNeighbors ---]
+[2025-03-05 16:08:59,453: INFO: model_training: Saved KNeighbors for Mental_Health_Condition_Yes]
+[2025-03-05 16:08:59,453: INFO: model_training: 
+--- Tuning NaiveBayes ---]
+[2025-03-05 16:08:59,493: INFO: model_training: Saved NaiveBayes for Mental_Health_Condition_Yes]
+[2025-03-05 16:08:59,493: INFO: model_training: 
+========================================]
+[2025-03-05 16:08:59,493: INFO: model_training: Training models for target: Severity]
+[2025-03-05 16:08:59,494: INFO: model_training: ========================================]
+[2025-03-05 16:08:59,495: INFO: model_training: Missing values in features: 0]
+[2025-03-05 16:08:59,495: INFO: model_training: Missing values in target: 0]
+[2025-03-05 16:08:59,498: INFO: model_training: 
+--- Tuning LogisticRegression ---]
+[2025-03-05 16:08:59,541: INFO: model_training: Saved LogisticRegression for Severity]
+[2025-03-05 16:08:59,542: INFO: model_training: 
+--- Tuning DecisionTree ---]
+[2025-03-05 16:08:59,603: INFO: model_training: Saved DecisionTree for Severity]
+[2025-03-05 16:08:59,604: INFO: model_training: 
+--- Tuning SVC ---]
+[2025-03-05 16:08:59,680: INFO: model_training: Saved SVC for Severity]
+[2025-03-05 16:08:59,680: INFO: model_training: 
+--- Tuning RandomForest ---]
+[2025-03-05 16:09:00,138: INFO: model_training: Saved RandomForest for Severity]
+[2025-03-05 16:09:00,138: INFO: model_training: 
+--- Tuning GradientBoosting ---]
+[2025-03-05 16:09:00,724: INFO: model_training: Saved GradientBoosting for Severity]
+[2025-03-05 16:09:00,726: INFO: model_training: 
+--- Tuning KNeighbors ---]
+[2025-03-05 16:09:00,807: INFO: model_training: Saved KNeighbors for Severity]
+[2025-03-05 16:09:00,808: INFO: model_training: 
+--- Tuning NaiveBayes ---]
+[2025-03-05 16:09:00,862: INFO: model_training: Saved NaiveBayes for Severity]
+[2025-03-05 16:09:00,863: INFO: model_training: 
+========================================]
+[2025-03-05 16:09:00,863: INFO: model_training: Training models for target: Stress_Level]
+[2025-03-05 16:09:00,863: INFO: model_training: ========================================]
+[2025-03-05 16:09:00,864: INFO: model_training: Missing values in features: 0]
+[2025-03-05 16:09:00,864: INFO: model_training: Missing values in target: 0]
+[2025-03-05 16:09:00,867: INFO: model_training: 
+--- Tuning LogisticRegression ---]
+[2025-03-05 16:09:00,927: INFO: model_training: Saved LogisticRegression for Stress_Level]
+[2025-03-05 16:09:00,929: INFO: model_training: 
+--- Tuning DecisionTree ---]
+[2025-03-05 16:09:01,002: INFO: model_training: Saved DecisionTree for Stress_Level]
+[2025-03-05 16:09:01,003: INFO: model_training: 
+--- Tuning SVC ---]
+[2025-03-05 16:09:01,065: INFO: model_training: Saved SVC for Stress_Level]
+[2025-03-05 16:09:01,066: INFO: model_training: 
+--- Tuning RandomForest ---]
+[2025-03-05 16:09:01,428: INFO: model_training: Saved RandomForest for Stress_Level]
+[2025-03-05 16:09:01,428: INFO: model_training: 
+--- Tuning GradientBoosting ---]
+[2025-03-05 16:09:02,066: INFO: model_training: Saved GradientBoosting for Stress_Level]
+[2025-03-05 16:09:02,066: INFO: model_training: 
+--- Tuning KNeighbors ---]
+[2025-03-05 16:09:02,132: INFO: model_training: Saved KNeighbors for Stress_Level]
+[2025-03-05 16:09:02,132: INFO: model_training: 
+--- Tuning NaiveBayes ---]
+[2025-03-05 16:09:02,169: INFO: model_training: Saved NaiveBayes for Stress_Level]
+[2025-03-05 16:09:02,170: INFO: model_training: 
+Saved training results to artifacts\model_training\training_results.csv]
+[2025-03-05 16:09:02,171: INFO: main: >>>>>> Stage Model Training Stage completed <<<<<<
+
+x==========x]
+[2025-03-05 16:09:02,171: INFO: main: >>>>>> Stage Model Inference Stage started <<<<<<]
+[2025-03-05 16:09:02,175: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-05 16:09:02,177: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 16:09:02,177: INFO: common: created directory at: artifacts]
+[2025-03-05 16:09:02,177: INFO: common: created directory at: artifacts/model_inference]
+[2025-03-05 16:09:02,191: INFO: inference: Loaded model: Mental_Health_Condition_Yes_DecisionTree]
+[2025-03-05 16:09:02,205: INFO: inference: Loaded model: Mental_Health_Condition_Yes_GradientBoosting]
+[2025-03-05 16:09:02,218: INFO: inference: Loaded model: Mental_Health_Condition_Yes_KNeighbors]
+[2025-03-05 16:09:02,222: INFO: inference: Loaded model: Mental_Health_Condition_Yes_LogisticRegression]
+[2025-03-05 16:09:02,224: INFO: inference: Loaded model: Mental_Health_Condition_Yes_NaiveBayes]
+[2025-03-05 16:09:02,245: INFO: inference: Loaded model: Mental_Health_Condition_Yes_RandomForest]
+[2025-03-05 16:09:02,264: INFO: inference: Loaded model: Mental_Health_Condition_Yes_SVC]
+[2025-03-05 16:09:02,279: INFO: inference: Loaded model: Severity_DecisionTree]
+[2025-03-05 16:09:02,300: INFO: inference: Loaded model: Severity_GradientBoosting]
+[2025-03-05 16:09:02,315: INFO: inference: Loaded model: Severity_KNeighbors]
+[2025-03-05 16:09:02,318: INFO: inference: Loaded model: Severity_LogisticRegression]
+[2025-03-05 16:09:02,320: INFO: inference: Loaded model: Severity_NaiveBayes]
+[2025-03-05 16:09:02,357: INFO: inference: Loaded model: Severity_RandomForest]
+[2025-03-05 16:09:02,374: INFO: inference: Loaded model: Severity_SVC]
+[2025-03-05 16:09:02,395: INFO: inference: Loaded model: Stress_Level_DecisionTree]
+[2025-03-05 16:09:02,422: INFO: inference: Loaded model: Stress_Level_GradientBoosting]
+[2025-03-05 16:09:02,438: INFO: inference: Loaded model: Stress_Level_KNeighbors]
+[2025-03-05 16:09:02,442: INFO: inference: Loaded model: Stress_Level_LogisticRegression]
+[2025-03-05 16:09:02,444: INFO: inference: Loaded model: Stress_Level_NaiveBayes]
+[2025-03-05 16:09:02,479: INFO: inference: Loaded model: Stress_Level_RandomForest]
+[2025-03-05 16:09:02,496: INFO: inference: Loaded model: Stress_Level_SVC]
+[2025-03-05 16:09:02,502: INFO: inference: Generated predictions for Mental_Health_Condition_Yes_DecisionTree]
+[2025-03-05 16:09:02,504: INFO: inference: Generated predictions for Mental_Health_Condition_Yes_GradientBoosting]
+[2025-03-05 16:09:02,510: INFO: inference: Generated predictions for Mental_Health_Condition_Yes_KNeighbors]
+[2025-03-05 16:09:02,512: INFO: inference: Generated predictions for Mental_Health_Condition_Yes_LogisticRegression]
+[2025-03-05 16:09:02,514: INFO: inference: Generated predictions for Mental_Health_Condition_Yes_NaiveBayes]
+[2025-03-05 16:09:02,518: INFO: inference: Generated predictions for Mental_Health_Condition_Yes_RandomForest]
+[2025-03-05 16:09:02,521: INFO: inference: Generated predictions for Mental_Health_Condition_Yes_SVC]
+[2025-03-05 16:09:02,531: INFO: inference: Generated predictions for Severity_DecisionTree]
+[2025-03-05 16:09:02,534: INFO: inference: Generated predictions for Severity_GradientBoosting]
+[2025-03-05 16:09:02,539: INFO: inference: Generated predictions for Severity_KNeighbors]
+[2025-03-05 16:09:02,543: INFO: inference: Generated predictions for Severity_LogisticRegression]
+[2025-03-05 16:09:02,544: INFO: inference: Generated predictions for Severity_NaiveBayes]
+[2025-03-05 16:09:02,552: INFO: inference: Generated predictions for Severity_RandomForest]
+[2025-03-05 16:09:02,554: INFO: inference: Generated predictions for Severity_SVC]
+[2025-03-05 16:09:02,556: INFO: inference: Generated predictions for Stress_Level_DecisionTree]
+[2025-03-05 16:09:02,559: INFO: inference: Generated predictions for Stress_Level_GradientBoosting]
+[2025-03-05 16:09:02,564: INFO: inference: Generated predictions for Stress_Level_KNeighbors]
+[2025-03-05 16:09:02,565: INFO: inference: Generated predictions for Stress_Level_LogisticRegression]
+[2025-03-05 16:09:02,568: INFO: inference: Generated predictions for Stress_Level_NaiveBayes]
+[2025-03-05 16:09:02,573: INFO: inference: Generated predictions for Stress_Level_RandomForest]
+[2025-03-05 16:09:02,575: INFO: inference: Generated predictions for Stress_Level_SVC]
+[2025-03-05 16:09:02,577: INFO: inference: Saved inference results to artifacts\model_inference\inference_results.csv]
+[2025-03-05 16:09:02,580: INFO: main: >>>>>> Stage Model Inference Stage completed <<<<<<
+
+x==========x]
