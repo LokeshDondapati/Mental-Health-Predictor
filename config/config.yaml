@@ -40,3 +40,12 @@ model_training:
       weights: [uniform, distance]
     NaiveBayes:
       var_smoothing: [1e-9, 1e-8]
+
+model_inference:
+  model_dir: artifacts/model_training/trained_models
+  input_data: artifacts/data_cleaning_encoded/inference_data.csv
+  output_dir: artifacts/model_inference
+  target_columns:
+    - Mental_Health_Condition_Yes
+    - Severity
+    - Stress_Level

@@ -96,9 +96,19 @@ class ModelTraining:
                     'User_ID'
                 ]
                 
-                # Exclude other targets from features
-                other_targets = [t for t in self.config.target_columns if t != target]
-                X = df.drop(columns=base_drop_columns + other_targets)
+                # Prepare features and target
+                base_features = [
+                    'Age', 'Sleep_Hours', 'Work_Hours', 'Physical_Activity_Hours',
+                    'Gender_Female', 'Gender_Male', 'Gender_Non-binary', 
+                    'Gender_Prefer not to say', 'Occupation_Education',
+                    'Occupation_Engineering', 'Occupation_Finance', 'Occupation_Healthcare',
+                    'Occupation_IT', 'Occupation_Other', 'Occupation_Sales',
+                    'Country_Australia', 'Country_Canada', 'Country_Germany',
+                    'Country_India', 'Country_Other', 'Country_UK', 'Country_USA'
+                ]
+
+                # Explicitly select features (instead of dropping)
+                X = df[base_features]
                 y = df[target]
                 
                 # Check for remaining NaNs

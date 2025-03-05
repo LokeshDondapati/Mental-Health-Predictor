@@ -27,8 +27,9 @@ class Inference:
             raise
 
     def preprocess_input(self, data: pd.DataFrame) -> pd.DataFrame:
-        """Add placeholder columns for expected features"""
-        required_features = [
+        """Replicate training data preprocessing"""
+        # List of all possible features used in training
+        base_features = [
             'Age', 'Sleep_Hours', 'Work_Hours', 'Physical_Activity_Hours',
             'Gender_Female', 'Gender_Male', 'Gender_Non-binary', 
             'Gender_Prefer not to say', 'Occupation_Education',
@@ -38,14 +39,16 @@ class Inference:
             'Country_India', 'Country_Other', 'Country_UK', 'Country_USA'
         ]
         
-        # Add missing columns with default values
-        for col in required_features:
-            if col not in data.columns:
-                data[col] = 0
+        # Add missing features with default values
+        for feature in base_features:
+            if feature not in data.columns:
+                data[feature] = 0
                 
-        return data[required_features]
-    
-    
+        # Remove any target columns that might exist
+        data = data.drop(columns=self.config.target_columns, errors='ignore')
+        
+        return data[base_features]
+
     def predict(self):
         """Run predictions for all loaded models"""
         try:

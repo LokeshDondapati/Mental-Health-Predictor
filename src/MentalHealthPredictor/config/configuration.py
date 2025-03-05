@@ -1,7 +1,7 @@
 from MentalHealthPredictor.constants import *
 import os
 from MentalHealthPredictor.utils.common import read_yaml, create_directories, save_json
-from MentalHealthPredictor.entity.config_entity import DataIngestionConfig, DataCleaningEncodingConfig,ModelTrainingConfig
+from MentalHealthPredictor.entity.config_entity import DataIngestionConfig, DataCleaningEncodingConfig,ModelTrainingConfig,ModelInferenceConfig
 from pathlib import Path
 
 class ConfigurationManager:
@@ -57,4 +57,15 @@ class ConfigurationManager:
             test_size=config["test_size"],
             random_state=config["random_state"],
             hyperparam_grids=config["hyperparam_grids"]
+        )
+    
+    
+    def get_model_inference_config(self) -> ModelInferenceConfig:
+        config = self.config["model_inference"]
+        create_directories([config["output_dir"]])
+        return ModelInferenceConfig(
+            model_dir=Path(config["model_dir"]),
+            input_data=Path(config["input_data"]),
+            output_dir=Path(config["output_dir"]),
+            target_columns=config["target_columns"]
         )
