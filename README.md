@@ -79,7 +79,7 @@ artifacts_root: artifacts
 data_cleaning_encoding:
   input_file: artifacts/data_ingestion/mental_health_dataset.csv  # ✅ The ingested file is used as input
   output_file: artifacts/data_cleaning_encoded/cleaned_encoded_data.csv  # ✅ Save cleaned & encoded data here
-
+```
 
 ## STAGE_03-> MODEL TRAINING
 
@@ -114,5 +114,5 @@ model_training:
       weights: [uniform, distance]
     NaiveBayes:
       var_smoothing: [1e-9, 1e-8]
-
+```
 
