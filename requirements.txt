@@ -30,4 +30,5 @@ joblib==1.4.2
 types-PyYAML  # (No version specified, add if needed)
 notebook  # (No version specified, add if needed)
 
--e .
+streamlit
+
