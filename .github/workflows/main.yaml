@@ -22,8 +22,15 @@ jobs:
       - name: Lint code
         run: echo "Linting repository"
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # If you have a requirements file
+          pip install pytest
+
       - name: Run unit tests
-        run: echo "Running unit tests"
+        run: |
+          pytest tests/ -v
 
   build-and-push-ecr-image:
     name: Continuous Delivery
@@ -86,13 +93,13 @@ jobs:
         run: |
          docker pull ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
          
-      - name: Stop and remove container if running
-        run: |
-          docker ps -q --filter "name=mentalhealthpredictor" | grep -q . && docker stop mentalhealthpredictor && docker rm -fv mentalhealthpredictor
+      #- name: Stop and remove container if running
+      #  run: |
+      #   docker ps -q --filter "name=mentalhealthpredictor" | grep -q . && docker stop mentalhealthpredictor && docker rm -fv mentalhealthpredictor
        
       - name: Run Docker Image to serve users
         run: |
-         docker run -p 8051:8051 --name=mentalhealthpredictor -e 'AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}' -e 'AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}' -e 'AWS_REGION=${{ secrets.AWS_REGION }}'  ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
+         docker run -d -p 8051:8051 --name=mentalhealthpredictor -e 'AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}' -e 'AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}' -e 'AWS_REGION=${{ secrets.AWS_REGION }}'  ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
       - name: Clean previous images and containers
         run: |
          docker system prune -f
