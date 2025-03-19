@@ -31,4 +31,4 @@ types-PyYAML  # (No version specified, add if needed)
 notebook  # (No version specified, add if needed)
 
 streamlit
-
+pytest
