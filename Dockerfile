@@ -4,20 +4,28 @@ FROM python:3.12-slim
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy only requirements first to leverage Docker caching
-COPY requirements.txt /app/
+# Install system dependencies first
+RUN apt update -y && \
+    apt install -y --no-install-recommends \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
-# Upgrade pip, setuptools, and wheel before installing dependencies
-RUN apt update -y && apt install -y awscli \
-    && pip install --upgrade pip setuptools wheel \
-    && pip install --no-cache-dir -r requirements.txt \
-    && apt clean && rm -rf /var/lib/apt/lists/*
+# Copy requirements and install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
-# Now copy the rest of the application files
-COPY . /app
+# Copy application files
+COPY . .
 
-# Expose the Streamlit default port
-EXPOSE 8501
+# Explicitly expose the correct port (matches Streamlit port)
+EXPOSE 8051
 
-# Run the Streamlit app
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true", "--browser.serverAddress=0.0.0.0"]
+# Proper Streamlit command with headless mode
+CMD ["streamlit", "run", "app.py", \
+    "--server.port=8051", \
+    "--server.address=0.0.0.0", \
+    "--server.headless=true", \
+    "--browser.serverAddress=0.0.0.0", \
+    "--browser.gatherUsageStats=False"]
