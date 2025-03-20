@@ -1,0 +1,22 @@
+Target,Model,Accuracy,Precision,F1-Score,Best_Params
+Mental_Health_Condition_Yes,LogisticRegression,0.54,0.5434,0.5308,{'classifier__C': 0.1}
+Mental_Health_Condition_Yes,DecisionTree,0.44,0.4311,0.4212,"{'classifier__min_samples_split': 2, 'classifier__max_depth': 5}"
+Mental_Health_Condition_Yes,SVC,0.52,0.5217,0.5104,"{'classifier__kernel': 'linear', 'classifier__C': 0.1}"
+Mental_Health_Condition_Yes,RandomForest,0.41,0.4011,0.3964,"{'classifier__n_estimators': 100, 'classifier__max_depth': 5}"
+Mental_Health_Condition_Yes,GradientBoosting,0.39,0.3533,0.3493,"{'classifier__n_estimators': 100, 'classifier__learning_rate': 0.01}"
+Mental_Health_Condition_Yes,KNeighbors,0.45,0.4495,0.4486,"{'classifier__weights': 'uniform', 'classifier__n_neighbors': 3}"
+Mental_Health_Condition_Yes,NaiveBayes,0.47,0.469,0.4657,{'classifier__var_smoothing': 1e-09}
+Severity,LogisticRegression,0.38,0.3817,0.3609,{'classifier__C': 10}
+Severity,DecisionTree,0.32,0.3159,0.3168,"{'classifier__min_samples_split': 5, 'classifier__max_depth': None}"
+Severity,SVC,0.4,0.4129,0.3831,"{'classifier__kernel': 'linear', 'classifier__C': 1}"
+Severity,RandomForest,0.3,0.2698,0.2569,"{'classifier__n_estimators': 100, 'classifier__max_depth': 5}"
+Severity,GradientBoosting,0.31,0.3667,0.2633,"{'classifier__n_estimators': 50, 'classifier__learning_rate': 0.01}"
+Severity,KNeighbors,0.26,0.2551,0.2552,"{'classifier__weights': 'distance', 'classifier__n_neighbors': 5}"
+Severity,NaiveBayes,0.35,0.3598,0.3518,{'classifier__var_smoothing': 1e-09}
+Stress_Level,LogisticRegression,0.3,0.3058,0.2985,{'classifier__C': 1}
+Stress_Level,DecisionTree,0.38,0.3808,0.3755,"{'classifier__min_samples_split': 5, 'classifier__max_depth': 5}"
+Stress_Level,SVC,0.32,0.3168,0.3178,"{'classifier__kernel': 'rbf', 'classifier__C': 1}"
+Stress_Level,RandomForest,0.39,0.3962,0.3836,"{'classifier__n_estimators': 100, 'classifier__max_depth': None}"
+Stress_Level,GradientBoosting,0.36,0.3536,0.3541,"{'classifier__n_estimators': 50, 'classifier__learning_rate': 0.01}"
+Stress_Level,KNeighbors,0.35,0.3451,0.3357,"{'classifier__weights': 'uniform', 'classifier__n_neighbors': 3}"
+Stress_Level,NaiveBayes,0.26,0.2636,0.2612,{'classifier__var_smoothing': 1e-09}
