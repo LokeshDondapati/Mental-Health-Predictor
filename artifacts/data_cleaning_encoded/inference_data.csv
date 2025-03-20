@@ -1,0 +1,6 @@
+Age,Sleep_Hours,Work_Hours,Physical_Activity_Hours,Gender_Female,Gender_Male,Gender_Non-binary,Gender_Prefer not to say,Occupation_Education,Occupation_Engineering,Occupation_Finance,Occupation_Healthcare,Occupation_IT,Occupation_Other,Occupation_Sales,Country_Australia,Country_Canada,Country_Germany,Country_India,Country_Other,Country_UK,Country_USA
+28,6.5,9,0.5,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+35,7.2,8,1.2,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0
+42,5.8,10,0.3,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+24,8.0,7,2.0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+31,6.0,9,0.8,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0
