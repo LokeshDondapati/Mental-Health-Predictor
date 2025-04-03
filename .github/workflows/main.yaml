@@ -16,7 +16,7 @@ jobs:
     name: Continuous Integration
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout codes
+      - name: Checkout codess
         uses: actions/checkout@v3
 
       - name: testing
