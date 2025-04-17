@@ -2,6 +2,7 @@
 Building the mental health predictor for predicting the mental health of people with yes or no as final prediction.
 User can select among multiple machine learning models for the prediction.
 
+![Dashboard Screenshot](https://raw.githubusercontent.com/<username>/<repo>/main/images/dashboard_screenshot.png)
 
 # How to run?
 ### STEPS:
