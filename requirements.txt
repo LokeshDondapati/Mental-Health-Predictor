@@ -32,3 +32,5 @@ notebook  # (No version specified, add if needed)
 
 streamlit
 pytest
+plotly
+psycopg2-binary
